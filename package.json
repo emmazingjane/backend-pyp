@@ -1,0 +1,16 @@
+{
+  "name": "pyp_backend",
+  "version": "1.0.0",
+  "description": "pick your poison back-end",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emma Bennett",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.2"
+  }
+}
