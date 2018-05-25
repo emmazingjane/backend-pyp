@@ -17,24 +17,26 @@ app.use(function(req, res, next) {
     next();
   });
 
-var liquor_typesController = require('./controllers/liquor_types')
+var liquor_typesController = require('./controllers/liquor_types');
+var liquor_recipesController = require('./controllers/liquor_recipes');
 
 // Home route view
 app.get('/', function(req,res){
    res.send('Hello World!!!');
 })
 
-// controllers
-app.get('/liquor_types', function(req, res){
-    res.send('made it to liquor types')
-})
-
 // routes
 app.get('/liquor_types', liquor_typesController.index);
+app.get('/liquor_types/:id', liquor_typesController.show);
+
+// recipes/single recipe/ create recipe
+app.get('/liquor_recipes', liquor_recipesController.index);
+app.get('/liquor_recipes/:id', liquor_recipesController.show);
+app.post('/liquor_recipes', liquor_recipesController.create);
 
 // server start
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 
-app.listen(3000, function(){
+app.listen(3001, function(){
     console.log('app works')
 })

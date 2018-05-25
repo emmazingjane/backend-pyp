@@ -7,12 +7,25 @@ function index (req, res){
         console.log(err);
         res.send(err);
       } else {
-        console.log( 'liquor_types = ', liquorTypes);
+        console.log( 'liquor_types = ', err, liquorTypes);
         res.json (liquorTypes);
       }
     })
   }
 
+  // show liquor type find by id
+  function show (req, res){
+    LiquorType.findById(req.params.liquorType_id, function(err, liquorType){
+      if (err){
+        console.log('LiquorType err: ', err);
+        res.send(err);
+      } else {
+        res.json(liquorType);
+      }
+    });
+  }
+  
 
 
 module.exports.index = index;
+module.exports.show = show;
