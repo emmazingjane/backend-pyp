@@ -12,7 +12,7 @@ var seedLiquor = [{
     tequila: 'tequila',
     },{
     brandy: 'brandy'
-}]
+}];
 
 var seedRecipes = [{
     img_url: "https://www.thecocktailproject.com/sites/default/files/styles/recipe-slider-img/public/knobcreek_oldfashioned_beauty_7832-4868-Edit.jpg?itok=cLs3oxvF" ,
@@ -49,13 +49,14 @@ db.LiquorRecipe.remove({}, function(err, remove){
       console.log("All Recipes:", createdRecipes);
       process.exit();
     });
-  });
+});
 
-  db.LiquorType.remove({}, function(err, remove){
-    console.log(err);
-    db.LiquorType.create(seedLiquor, function(err, createdType){
-      if (err) { return console.log('ERROR', err); }
-      console.log("All Recipes:", createdType);
-      process.exit();
-    });
-  });
+// db.LiquorType.remove({}, function(err, remove){
+//     console.log(err);
+
+//     db.LiquorType.create(seedLiquor, function(err, createdType){
+//       if (err) { return console.log('ERROR', err); }
+//       console.log("All Types:", createdType);
+//       process.exit();
+//     });
+// });
