@@ -8,6 +8,7 @@ var LiquorRecipeSchema = new Schema ({
   description: String,
   ingredients: String,
   instructions: String,
+  votes: Number,
   type: [LiquorType.schema]
 });
 
