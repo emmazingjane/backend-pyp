@@ -34,6 +34,7 @@ app.get('/liquor_types/:liquor_id', liquor_typesController.show);
 // recipes/single recipe/ create recipe
 app.get('/liquor_recipes', liquor_recipesController.index);
 app.get('/liquor_recipes/:id', liquor_recipesController.show);
+// this would show the recipe
 app.post('/liquor_recipes', liquor_recipesController.create);
 
 // server start

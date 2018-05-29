@@ -15,7 +15,7 @@ function index (req, res){
   }
 
   function show (req, res){
-    LiquorRecipe.findById(req.params.liquorRecipe_id, function(err, LiquorRecipe){
+    LiquorRecipe.findById(req.params.id, function(err, LiquorRecipe){
       if (err){
         console.log('LiquorRecipe err: ', err);
         res.send(err);
