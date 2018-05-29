@@ -1,17 +1,17 @@
 var db = require('./models')
 
 var seedLiquor = [{
-    whiskey: 'whiskey',
+    type: 'whiskey',
     },{
-    vodka: 'vodka',
+    type: 'vodka',
     },{
-    rum: 'rum', 
+    type: 'rum', 
     },{
-    gin: 'gin',
+    type: 'gin',
     },{
-    tequila: 'tequila',
+    type: 'tequila',
     },{
-    brandy: 'brandy'
+    type: 'brandy'
 }];
 
 var seedRecipes = [{
@@ -51,12 +51,12 @@ db.LiquorRecipe.remove({}, function(err, remove){
     });
 });
 
-// db.LiquorType.remove({}, function(err, remove){
-//     console.log(err);
+db.LiquorType.remove({}, function(err, remove){
+    console.log(err);
 
-//     db.LiquorType.create(seedLiquor, function(err, createdType){
-//       if (err) { return console.log('ERROR', err); }
-//       console.log("All Types:", createdType);
-//       process.exit();
-//     });
-// });
+    db.LiquorType.create(seedLiquor, function(err, createdType){
+      if (err) { return console.log('ERROR', err); }
+      console.log("All Types:", createdType);
+      process.exit();
+    });
+});

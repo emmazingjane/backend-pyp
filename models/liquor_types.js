@@ -2,11 +2,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var LiquorTypeSchema = new Schema ({
-    whiskey: String,
-    vodka: String,
-    rum: String,
-    gin: String,
-    tequila: String,
+    type: String,
+    type: String,
+    type: String,
+    type: String,
+    type: String,
     brandy: String,
 });
 

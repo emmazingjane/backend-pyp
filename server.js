@@ -27,7 +27,9 @@ app.get('/', function(req,res){
 
 // routes
 app.get('/liquor_types', liquor_typesController.index);
-app.get('/liquor_types/:id', liquor_typesController.show);
+// this is the home page
+app.get('/liquor_types/:type', liquor_typesController.show);
+// this would be the whiskey/vodka page
 
 // recipes/single recipe/ create recipe
 app.get('/liquor_recipes', liquor_recipesController.index);
