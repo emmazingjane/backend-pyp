@@ -9,10 +9,11 @@ var LiquorRecipeSchema = new Schema ({
   ingredients: String,
   instructions: String,
   votes: Number,
-  type: [LiquorType.schema]
+  // type: { type: Schema.Types.ObjectId, ref: 'LiquorTypes' }
+  liquorType: String,
 });
 
-var LiquorRecipe = mongoose.model('LiquorRecipes', LiquorRecipeSchema);
+var LiquorRecipe = mongoose.model('LiquorRecipe', LiquorRecipeSchema);
 
 
 module.exports = LiquorRecipe;

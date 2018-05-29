@@ -1,5 +1,6 @@
 var models = require('../models');
 var LiquorType = models.LiquorType;
+var LiquorRecipe = models.LiquorRecipe;
 
 function index (req, res){
     LiquorType.find({}, function(err, liquorTypes){
@@ -15,15 +16,32 @@ function index (req, res){
 
   // show liquor type find by id
   function show (req, res){
-    LiquorType.findById(req.params.liquorType_id, function(err, liquorType){
-      if (err){
-        console.log('LiquorType err: ', err);
-        res.send(err);
-      } else {
-        res.json(liquorType);
-      }
-    });
+    let liquor_id = req.params.liquor_id;
+    LiquorType.findById(liquor_id, function(err, foundLiquor) {
+
+      let foundType = foundLiquor.liquorType;
+      LiquorRecipe.find({liquorType: foundType}, function(err, foundRecipes){
+        if(err){
+          res.json(err);
+        } else {
+          res.json(foundRecipes);
+        }
+      })
+    })
   }
+
+
+  // function show (req, res){
+  //   // Update this to Liqour_Recipes.find()
+  //   LiquorType.findById(req.params.liquor_id, function(err, liquorType){
+  //     if (err){
+  //       console.log('LiquorType err: ', err);
+  //       res.send(err);
+  //     } else {
+  //       res.json(liquorType);
+  //     }
+  //   });
+  // }
   
 
 

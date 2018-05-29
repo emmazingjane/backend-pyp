@@ -28,8 +28,8 @@ app.get('/', function(req,res){
 // routes
 app.get('/liquor_types', liquor_typesController.index);
 // this is the home page
-app.get('/liquor_types/:type', liquor_typesController.show);
-// this would be the whiskey/vodka page
+app.get('/liquor_types/:liquor_id', liquor_typesController.show);
+// this would whiskey page
 
 // recipes/single recipe/ create recipe
 app.get('/liquor_recipes', liquor_recipesController.index);
