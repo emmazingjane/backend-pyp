@@ -30,12 +30,15 @@ app.get('/liquor_types', liquor_typesController.index);
 // this is the home page
 app.get('/liquor_types/:liquor_id', liquor_typesController.show);
 // this would whiskey page
+// app.put('/liquor_type/:liquor_id', liquor_typesController.update);
+// changing the votes
 
 // recipes/single recipe/ create recipe
 app.get('/liquor_recipes', liquor_recipesController.index);
 app.get('/liquor_recipes/:id', liquor_recipesController.show);
 // this would show the recipe
 app.post('/liquor_recipes', liquor_recipesController.create);
+// new cocktiail recipe
 
 // server start
 let port = process.env.PORT || 3001;
