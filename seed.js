@@ -135,31 +135,31 @@ db.LiquorType.remove({}, function(err, remove){
 },
 // GIn
 {
-  img_url: 'http://cdn1.foodviva.com/static-content/food-images/long-drinks-recipes/cuba-libre-drink-rum-coke/cuba-libre-drink-rum-coke.jpg',
-  drinkName: 'Tequila Sunrise',
-  description: 'Perfect for when it is too early for shots.',
-  ingredients: 'Ice, Tequila, Orange Juice and Grenadine',
-  instructions: 'Fill your cup with ice, pour 2oz of tequila, add OJ then pour 1/5 oz of Grenadine over the top.',
+  img_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVjBpb_3HB-i-nvH1wV1cIAGwuhnBbwnGSUpxj30kOYllxY0EwGw',
+  drinkName: 'Gin and Tonic',
+  description: 'Citrus, crisp drink for summer',
+  ingredients: 'Ice, Gine, Tonic and lime',
+  instructions: 'Fill your cup with ice, pour 2oz of Gin, add tonic then add lime for garnish',
   votes: 6,
-  liquorType: 'Tequila'
+  liquorType: 'Gin'
+},
+{
+  img_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRanYebGxJXNhIxW0l9fbLn5PKU1U_c9lhps9MTo287NGQuGz0Bqw',
+  drinkName: 'Gimlet',
+  description: 'Simple and refreshing',
+  ingredients: 'Ice, Gin, Lime Juice, Simple Syrup',
+  instructions: 'Fill your shaker with 2 1/2oz of gin, add 1/2 lime juice and 1/2 of simple syrup. Shake and poru into a coupe glass.',
+  votes: 6,
+  liquorType: 'Gin'
 },
 {
   img_url: 'http://cdn1.foodviva.com/static-content/food-images/long-drinks-recipes/cuba-libre-drink-rum-coke/cuba-libre-drink-rum-coke.jpg',
-  drinkName: 'Tequila Sunrise',
-  description: 'Perfect for when it is too early for shots.',
-  ingredients: 'Ice, Tequila, Orange Juice and Grenadine',
-  instructions: 'Fill your cup with ice, pour 2oz of tequila, add OJ then pour 1/5 oz of Grenadine over the top.',
+  drinkName: 'Tom Collins',
+  description: 'Sparkling Spiked Lemonade',
+  ingredients: 'Ice, Lemon Juice, Simple Syrup, 2oz Gin, Club Soda, Cherry and an Orange Wheel',
+  instructions: 'Add the lemon juice, simple syrup and gin to a shaker and fill with ice. Shake well and strain into a highball or Collins glass filled with fresh ice. Top with club soda and garnish with a lemon wheel and a cherry.',
   votes: 6,
-  liquorType: 'Tequila'
-},
-{
-  img_url: 'http://cdn1.foodviva.com/static-content/food-images/long-drinks-recipes/cuba-libre-drink-rum-coke/cuba-libre-drink-rum-coke.jpg',
-  drinkName: 'Tequila Sunrise',
-  description: 'Perfect for when it is too early for shots.',
-  ingredients: 'Ice, Tequila, Orange Juice and Grenadine',
-  instructions: 'Fill your cup with ice, pour 2oz of tequila, add OJ then pour 1/5 oz of Grenadine over the top.',
-  votes: 6,
-  liquorType: 'Tequila'
+  liquorType: 'Gin'
 },
 
 // Brandy
