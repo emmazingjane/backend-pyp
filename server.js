@@ -37,6 +37,8 @@ app.get('/liquor_types/:liquor_id', liquor_typesController.show);
 app.get('/liquor_recipes', liquor_recipesController.index);
 app.get('/liquor_recipes/:id', liquor_recipesController.show);
 // this would show the recipe
+app.put('/liquor_recipes/:id', liquor_recipesController.update);
+// this is for the updating of votes with buttons
 app.post('/liquor_recipes', liquor_recipesController.create);
 // new cocktiail recipe
 

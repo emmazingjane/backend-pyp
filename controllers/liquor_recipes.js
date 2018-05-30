@@ -16,6 +16,7 @@ function index (req, res){
 
   function show (req, res){
     LiquorRecipe.findById(req.params.id, function(err, LiquorRecipe){
+      console.log(req.params.id)
       if (err){
         console.log('LiquorRecipe err: ', err);
         res.send(err);
@@ -37,6 +38,18 @@ function index (req, res){
   }
 
 
+  function update(req, res) {
+    console.log(req.body.drinkName)
+    LiquorRecipe.findByIdAndUpdate(req.params.id, {$set: req.body}, function(err, foundRecipe) {
+      if (err) console.log('Liquor Reciper update err', err);
+      foundRecipe.votes = req.body.votes
+      // console.log('ID: ', req.params.id)
+      res.json(foundRecipe);
+    })
+  }
+
+
 module.exports.index = index;
 module.exports.show = show;
 module.exports.create = create;
+module.exports.update = update;
